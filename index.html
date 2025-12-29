@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta 
+  name="viewport" 
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+>
+
+<title>WEB SCRIPT BY SECRE</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .glass-wrapper {
+    width: 95%;
+    max-width: 420px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  }
+
+  .wrapper-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .title-line {
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+    margin-bottom: 18px;
+  }
+
+  .glass-box {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+  }
+
+  .glass-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .glass-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .glass-box.active .glass-content {
+    max-height: 400px;
+  }
+
+  .glass-box.active .arrow {
+    transform: rotate(180deg);
+  }
+
+  .menu-item {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+
+  .download-btn {
+    margin-top: 18px;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .download-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  }
+
+  .download-btn:active {
+    transform: scale(0.98);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="glass-wrapper">
+
+  <div class="wrapper-title tinycaps">
+    SECRE FREE SCRIPT FEATURES
+  </div>
+  <div class="title-line"></div>
+
+  <div class="glass-box" onclick="toggleMenu(this)">
+    <div class="glass-header">
+      <span>MONEY MENU</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="glass-content">
+      <div class="menu-item tinycaps">CHEAT 1</div>
+      <div class="menu-item tinycaps">CHEAT 2</div>
+      <div class="menu-item tinycaps">CHEAT 3</div>
+      <div class="menu-item tinycaps">CHEAT 4</div>
+    </div>
+  </div>
+
+  <div class="glass-box" onclick="toggleMenu(this)">
+    <div class="glass-header">
+      <span>COIN MENU</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="glass-content">
+      <div class="menu-item tinycaps">CHEAT 1</div>
+      <div class="menu-item tinycaps">CHEAT 2</div>
+      <div class="menu-item tinycaps">CHEAT 3</div>
+      <div class="menu-item tinycaps">CHEAT 4</div>
+    </div>
+  </div>
+
+  <div class="glass-box" onclick="toggleMenu(this)">
+    <div class="glass-header">
+      <span>ENGINE MENU</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="glass-content">
+      <div class="menu-item tinycaps">CHEAT 1</div>
+      <div class="menu-item tinycaps">CHEAT 2</div>
+      <div class="menu-item tinycaps">CHEAT 3</div>
+      <div class="menu-item tinycaps">CHEAT 4</div>
+    </div>
+  </div>
+
+  <div class="glass-box" onclick="toggleMenu(this)">
+    <div class="glass-header">
+      <span>UNLOCK MENU</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="glass-content">
+      <div class="menu-item tinycaps">CHEAT 1</div>
+      <div class="menu-item tinycaps">CHEAT 2</div>
+      <div class="menu-item tinycaps">CHEAT 3</div>
+      <div class="menu-item tinycaps">CHEAT 4</div>
+    </div>
+  </div>
+
+  <div class="glass-box" onclick="toggleMenu(this)">
+    <div class="glass-header">
+      <span>ACHIEVEMENTS MENU</span>
+      <span class="arrow">▼</span>
+    </div>
+    <div class="glass-content">
+      <div class="menu-item tinycaps">CHEAT 1</div>
+      <div class="menu-item tinycaps">CHEAT 2</div>
+      <div class="menu-item tinycaps">CHEAT 3</div>
+      <div class="menu-item tinycaps">CHEAT 4</div>
+    </div>
+  </div>
+
+  <a 
+    href="LAGAY MO DTU DOWNLOAD LINK KUPAL"
+    download
+    class="download-btn tinycaps"
+  >
+    Download Script
+  </a>
+
+</div>
+
+<script>
+  function toggleMenu(clickedBox) {
+    document.querySelectorAll(".glass-box").forEach(box => {
+      if (box !== clickedBox) box.classList.remove("active");
+    });
+    clickedBox.classList.toggle("active");
+  }
+
+  function TinyCaps(text) {
+    const map = {
+      a:'ᴀ', b:'ʙ', c:'ᴄ', d:'ᴅ', e:'ᴇ', f:'ғ',
+      g:'ɢ', h:'ʜ', i:'ɪ', j:'ᴊ', k:'ᴋ', l:'ʟ',
+      m:'ᴍ', n:'ɴ', o:'ᴏ', p:'ᴘ', q:'ǫ', r:'ʀ',
+      s:'s', t:'ᴛ', u:'ᴜ', v:'ᴠ', w:'ᴡ', x:'x',
+      y:'ʏ', z:'ᴢ'
+    };
+    let out = "";
+    for (let c of text) out += map[c.toLowerCase()] || c;
+    return out;
+  }
+
+  document.querySelectorAll(".tinycaps").forEach(el => {
+    el.textContent = TinyCaps(el.textContent);
+  });
+</script>
+
+</body>
+</html>
