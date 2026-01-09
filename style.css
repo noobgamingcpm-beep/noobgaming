@@ -1,0 +1,153 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #000;
+  color: white;
+}
+
+/* ===== CUSTOM ALERT ===== */
+#customAlert {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertBox {
+  background: #000;
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px red, 0 0 40px red inset;
+  text-align: center;
+  color: #00ff00;
+  text-shadow: 0 0 10px red;
+}
+
+.alertBox button {
+  background: #1a0000;
+  color: white;
+  font-size: 16px;
+  border: 2px solid red;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 12px red, 0 0 20px red inset;
+}
+
+.alertBox button:hover {
+  background-color: #330000;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  text-align: center;
+  color: red;
+  text-shadow: 0 0 12px red;
+}
+
+h3 {
+  text-align: center;
+  color: green;
+  text-shadow: 0 0 12px red;
+}
+
+/* ===== FORM ===== */
+form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  border: 2px solid red;
+  box-shadow: 0 0 20px red, 0 0 40px red inset;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #111;
+  border: 2px solid red;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 0 8px red;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #1a0000;
+  border: 2px solid red;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+  margin-top: 10px;
+}
+
+.dropdown .selected {
+  background: #111;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown .options {
+  position: absolute;
+  width: 100%;
+  background: #111;
+  border: 2px solid red;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.dropdown.open .options {
+  max-height: 200px;
+}
+
+.dropdown .option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown .option:hover {
+  background: #220000;
+}
+
+/* ===== TOAST ===== */
+#toast {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #330000;
+  padding: 16px 28px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px red;
+}
