@@ -1,236 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSC MEMBERSHIP FORM</title>
 
-<meta 
-  name="viewport" 
-  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
->
-
-<title>WEB SCRIPT BY SECRE</title>
-
-<style>
-  * {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-
-  .glass-wrapper {
-    width: 95%;
-    max-width: 420px;
-    padding: 20px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-  }
-
-  .wrapper-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: -0.5px;
-    margin-bottom: 10px;
-  }
-
-  .title-line {
-    width: 100%;
-    height: 2px;
-    background: rgba(255,255,255,0.3);
-    margin-bottom: 18px;
-  }
-
-  .glass-box {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
-    cursor: pointer;
-  }
-
-  .glass-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  .arrow {
-    transition: transform 0.3s ease;
-  }
-
-  .glass-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-
-  .glass-box.active .glass-content {
-    max-height: 400px;
-  }
-
-  .glass-box.active .arrow {
-    transform: rotate(180deg);
-  }
-
-  .menu-item {
-    background: rgba(0, 0, 0, 0.35);
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 8px;
-  }
-
-  .download-btn {
-    margin-top: 18px;
-    width: 100%;
-    padding: 14px;
-    text-align: center;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    display: block;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-
-  .download-btn:hover {
-    background: rgba(255, 255, 255, 0.28);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-  }
-
-  .download-btn:active {
-    transform: scale(0.98);
-  }
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="glass-wrapper">
-
-  <div class="wrapper-title tinycaps">
-    SECRE FREE SCRIPT FEATURES
+  <h2>VSC MEMBERSHIP FORM</h2>
+  <h3>MADE BY NOOBGAMING</h3>
+  
+  <div id="customAlert">
+  <div class="alertBox">
+    <h3>Form Submitted!</h3>
+    <button onclick="closeCustomAlert()">OK</button>
   </div>
-  <div class="title-line"></div>
-
-  <div class="glass-box" onclick="toggleMenu(this)">
-    <div class="glass-header">
-      <span>MONEY MENU</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="glass-content">
-      <div class="menu-item tinycaps">CHEAT 1</div>
-      <div class="menu-item tinycaps">CHEAT 2</div>
-      <div class="menu-item tinycaps">CHEAT 3</div>
-      <div class="menu-item tinycaps">CHEAT 4</div>
-    </div>
-  </div>
-
-  <div class="glass-box" onclick="toggleMenu(this)">
-    <div class="glass-header">
-      <span>COIN MENU</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="glass-content">
-      <div class="menu-item tinycaps">CHEAT 1</div>
-      <div class="menu-item tinycaps">CHEAT 2</div>
-      <div class="menu-item tinycaps">CHEAT 3</div>
-      <div class="menu-item tinycaps">CHEAT 4</div>
-    </div>
-  </div>
-
-  <div class="glass-box" onclick="toggleMenu(this)">
-    <div class="glass-header">
-      <span>ENGINE MENU</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="glass-content">
-      <div class="menu-item tinycaps">CHEAT 1</div>
-      <div class="menu-item tinycaps">CHEAT 2</div>
-      <div class="menu-item tinycaps">CHEAT 3</div>
-      <div class="menu-item tinycaps">CHEAT 4</div>
-    </div>
-  </div>
-
-  <div class="glass-box" onclick="toggleMenu(this)">
-    <div class="glass-header">
-      <span>UNLOCK MENU</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="glass-content">
-      <div class="menu-item tinycaps">CHEAT 1</div>
-      <div class="menu-item tinycaps">CHEAT 2</div>
-      <div class="menu-item tinycaps">CHEAT 3</div>
-      <div class="menu-item tinycaps">CHEAT 4</div>
-    </div>
-  </div>
-
-  <div class="glass-box" onclick="toggleMenu(this)">
-    <div class="glass-header">
-      <span>ACHIEVEMENTS MENU</span>
-      <span class="arrow">▼</span>
-    </div>
-    <div class="glass-content">
-      <div class="menu-item tinycaps">CHEAT 1</div>
-      <div class="menu-item tinycaps">CHEAT 2</div>
-      <div class="menu-item tinycaps">CHEAT 3</div>
-      <div class="menu-item tinycaps">CHEAT 4</div>
-    </div>
-  </div>
-
-  <a 
-    href="LAGAY MO DTU DOWNLOAD LINK KUPAL"
-    download
-    class="download-btn tinycaps"
-  >
-    Download Script
-  </a>
-
 </div>
 
-<script>
-  function toggleMenu(clickedBox) {
-    document.querySelectorAll(".glass-box").forEach(box => {
-      if (box !== clickedBox) box.classList.remove("active");
+  <form id="clubForm">
+    <label for="fullname">Your Name:</label>
+    <input type="text" id="fullname" required />
+
+    <label>Your Age:</label>
+    <div class="dropdown" data-name="age">
+      <div class="selected">Select Age <span class="arrow">▼</span></div>
+      <div class="options">
+        <div class="option">Under 13</div>
+        <div class="option">13–16</div>
+        <div class="option">16–24</div>
+        <div class="option">25–34</div>
+        <div class="option">35+</div>
+      </div>
+    </div>
+
+    <label>Gender:</label>
+    <div class="dropdown" data-name="gender">
+      <div class="selected">Select Gender <span class="arrow">▼</span></div>
+      <div class="options">
+        <div class="option">Male</div>
+        <div class="option">Female</div>
+      </div>
+    </div>
+
+    <label for="clubName">Previous Club:</label>
+    <input type="text" id="clubName" required>
+
+    <label>CPM Experience:</label>
+    <div class="dropdown" data-name="cpmExperience">
+      <div class="selected">Select Experience <span class="arrow">▼</span></div>
+      <div class="options">
+        <div class="option">Under 1 Month</div>
+        <div class="option">1–5 months</div>
+        <div class="option">6–10 months</div>
+        <div class="option">11–12 months</div>
+        <div class="option">1–3 years</div>
+      </div>
+    </div>
+
+    <label for="gameId">Game ID:</label>
+    <input type="text" id="gameId" required>
+
+    <label for="inGameName">Name In Game:</label>
+    <input type="text" id="inGameName" required>
+
+    <label>Preferred Role:</label>
+    <div class="dropdown" data-name="clubRole">
+      <div class="selected">Select Role <span class="arrow">▼</span></div>
+      <div class="options">
+        <div class="option">Event Organizer</div>
+        <div class="option">Builder</div>
+        <div class="option">Recruiter</div>
+        <div class="option">Video Grapher/Editor</div>
+        <div class="option">PhotoGrapher</div>
+        <div class="option">Tuner</div>
+        <div class="option">GG/Termux User</div>
+        <div class="option">Content Creator</div>
+      </div>
+    </div>
+
+    <label for="whyJoin">Why do you want to join?</label>
+    <textarea id="whyJoin" required></textarea>
+
+    <label for="image">Upload Your ID:</label>
+    <input type="file" id="image" accept="image/*" required />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="output"></div>
+  <div id="toast">Please wait until it says "Form Submitted"</div>
+  <audio id="toastSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_912fa5ce62.mp3?filename=click-ui-2-146881.mp3" preload="auto"></audio>
+
+  <script>
+    const botToken = "8563730312:AAHaCyH6vT8dF28MS3_lE89ELixoAPXy1r0";
+    const chatIds = ["6036231567", "6784382795"];
+
+    document.querySelectorAll(".dropdown").forEach(drop => {
+      const selected = drop.querySelector(".selected");
+      const options = drop.querySelector(".options");
+      selected.addEventListener("click", () => drop.classList.toggle("open"));
+      options.querySelectorAll(".option").forEach(opt => {
+        opt.addEventListener("click", () => {
+          selected.innerHTML = opt.textContent + ' <span class="arrow">▼</span>';
+          drop.setAttribute("data-value", opt.textContent);
+          drop.classList.remove("open");
+        });
+      });
     });
-    clickedBox.classList.toggle("active");
-  }
+    
+    function showCustomAlert() {
+  document.getElementById("customAlert").style.display = "flex";
+}
 
-  function TinyCaps(text) {
-    const map = {
-      a:'ᴀ', b:'ʙ', c:'ᴄ', d:'ᴅ', e:'ᴇ', f:'ғ',
-      g:'ɢ', h:'ʜ', i:'ɪ', j:'ᴊ', k:'ᴋ', l:'ʟ',
-      m:'ᴍ', n:'ɴ', o:'ᴏ', p:'ᴘ', q:'ǫ', r:'ʀ',
-      s:'s', t:'ᴛ', u:'ᴜ', v:'ᴠ', w:'ᴡ', x:'x',
-      y:'ʏ', z:'ᴢ'
-    };
-    let out = "";
-    for (let c of text) out += map[c.toLowerCase()] || c;
-    return out;
-  }
+function closeCustomAlert() {
+  document.getElementById("customAlert").style.display = "none";
+}
 
-  document.querySelectorAll(".tinycaps").forEach(el => {
-    el.textContent = TinyCaps(el.textContent);
-  });
-</script>
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      const sound = document.getElementById("toastSound");
+      toast.textContent = msg;
+      toast.style.display = "block";
+      sound.play();
+      setTimeout(() => toast.style.display = "none", 4000);
+    }
 
+    document.getElementById("clubForm").addEventListener("submit", async e => {
+      e.preventDefault();
+      showToast("Sending to Telegram...");
+
+      const getVal = name => document.querySelector(`.dropdown[data-name="${name}"]`)?.getAttribute("data-value") || "";
+      const name = document.getElementById("fullname").value;
+      const age = getVal("age");
+      const gender = getVal("gender");
+      const club = document.getElementById("clubName").value;
+      const xp = getVal("cpmExperience");
+      const gameId = document.getElementById("gameId").value;
+      const ign = document.getElementById("inGameName").value;
+      const role = getVal("clubRole");
+      const reason = document.getElementById("whyJoin").value;
+      const file = document.getElementById("image").files[0];
+
+      const msg =
+`╔═══════════════════════╗
+║📝 VSC Membership Form
+╠═══════════════════════╣
+║➪ Name: ${name}
+║➪ Age: ${age}
+║➪ Gender: ${gender}
+║➪ Previous Club: ${club}
+║➪ CPM Experience: ${xp}
+║➪ Game ID: ${gameId}
+║➪ IGN: ${ign}
+║➪ Preferred Role: ${role}
+║➪ Reason: ${reason}
+╚═══════════════════════╝`;
+
+      document.getElementById("output").textContent = msg;
+
+      const requests = chatIds.map(async id => {
+        if (file) {
+          const formData = new FormData();
+          formData.append("chat_id", id);
+          formData.append("photo", file);
+          await fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+            method: "POST",
+            body: formData
+          });
+        }
+        return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: id, text: msg })
+        });
+      });
+
+      await Promise.all(requests);
+      showCustomAlert();
+      document.getElementById("clubForm").reset();
+    });
+  </script>
 </body>
 </html>
